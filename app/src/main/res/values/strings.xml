@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_activity_add_record">Add Record</string>
+    <string name="title_activity_view_record">View Record</string>
+    <string name="title_activity_folder_list">Folders</string>
+    <string name="title_activity_record_list">Record List</string>
+
+    <string name="app_name">myLocker</string>
+    <string name="cannot">Cannot</string>
+    <string name="album_name">DailySelfie</string>
+    <string name="camera">Camera</string>
+    <string name="photo_desc_string">photo</string>
+    <string name="title_activity_full_photo_view">FullPhotoViewActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- action menus -->
+    <string name="action_add">Add</string>
+    <string name="action_folder_list">Folder List</string>
+    <string name="action_sync">Sync</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_help">Help</string>
+    <string name="action_logout">Logout</string>
+
+    <!-- add record -->
+    <string name="add_record_folder_name">Folder Name</string>
+    <string name="add_record_record_name">Title</string>
+    <string name="add_record_user_id">UserId</string>
+    <string name="add_record_user_password">Passowrd</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_my_locker">myLocker</string>
+    
+    <string-array name="derivation_methods">
+        <item>Padding key derivation</item>
+        <item>SHA1PRNG key derivation</item>
+        <item>PBKDF2 key derivation</item>
+        <item>PKCS#12 key derivation</item>
+    </string-array>
+    
+
+</resources>
