@@ -31,12 +31,16 @@ import com.geeks.mylocker.helper.MenuHelper;
 
 import de.greenrobot.dao.AbstractDao;
 
-public class ListRecordActivity extends ListActivity implements BaseActivityHelper{
+/**
+ *
+ */
+public class ListRecordActivity extends ListActivity implements BaseActivityHelper {
 
 	protected final String TAG = getClass().getSimpleName();
 	
 	public final static String EXTRA_MESSAGE = "com.geeks.mylocker.groulist.MESSAGE";
-	public final static String SELECTED_ENTITY = "com.geeks.mylocker.entity";
+
+    public final static String SELECTED_ENTITY = "com.geeks.mylocker.entity";
 	
 	private Config config;
 	
@@ -55,7 +59,8 @@ public class ListRecordActivity extends ListActivity implements BaseActivityHelp
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+
+        super.onCreate(savedInstanceState);
 		
 		Bundle extras = getIntent().getExtras();
 		if (extras != null) {

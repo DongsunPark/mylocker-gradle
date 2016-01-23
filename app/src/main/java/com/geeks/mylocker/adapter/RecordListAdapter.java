@@ -14,12 +14,15 @@ import android.widget.TextView;
 import com.geeks.mylocker.R;
 import com.geeks.mylocker.dao.Record;
 
+/**
+ *
+ */
 public class RecordListAdapter extends ArrayAdapter<Record> {
-	
+
 	protected final String TAG = getClass().getSimpleName();
 	
-	private final Context context;
-	private final List<Record> records;
+	private final Context context;//the same as mContext in ArrayAdapter
+	private final List<Record> records; // is the same as mOriginalValues in ArrayAdapter.
 	
 	static class ViewHolder {
 		public TextView text;
@@ -45,13 +48,13 @@ public class RecordListAdapter extends ArrayAdapter<Record> {
 			LayoutInflater inflater = (LayoutInflater) context
 					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			rowView = inflater.inflate(R.layout.rowlayout_record, null);
-			
+
 			ViewHolder viewHolder = new ViewHolder();
 			viewHolder.text = (TextView) rowView.findViewById(R.id.rowlayout_record_name);
 			viewHolder.image = (ImageView) rowView.findViewById(R.id.rowlayout_record_icon);
-			
 			rowView.setTag(viewHolder);
-			
+
+
 		}
 		
 		
