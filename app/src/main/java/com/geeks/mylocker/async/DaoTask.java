@@ -5,7 +5,11 @@ import android.util.Log;
 
 import com.geeks.mylocker.dao.Entity;
 
-public abstract class DaoTask<T extends Entity> extends AsyncTask<DaoCommand<T>, Void, Entity> {
+/**
+ * A task class operating a DAO command
+ * @param <T>
+ */
+public abstract class DaoTask<T extends Entity> extends AsyncTask<DaoCommand<T>, Void, Entity> {//params, progress, result
 
 	private static final String TAG = DaoTask.class.getSimpleName();
     

@@ -8,6 +8,9 @@ import android.content.IntentFilter;
 
 import com.geeks.mylocker.LoginActivity;
 
+/**
+ *
+ */
 public class ActivityHelper {
 	
 	protected final String TAG = getClass().getSimpleName();

@@ -38,7 +38,7 @@ public class ListRecordActivity extends ListActivity implements BaseActivityHelp
 
 	protected final String TAG = getClass().getSimpleName();
 	
-	public final static String EXTRA_MESSAGE = "com.geeks.mylocker.groulist.MESSAGE";
+	public final static String EXTRA_MESSAGE = "com.geeks.mylocker.grouplist.MESSAGE";
 
     public final static String SELECTED_ENTITY = "com.geeks.mylocker.entity";
 	
@@ -126,10 +126,14 @@ public class ListRecordActivity extends ListActivity implements BaseActivityHelp
 				DaoCommand<Record> commandRecord = new DaoCommand<Record>(dao, record, DaoCommand.CRUD.SELECT);
 					
 				new DaoTask<Record>() {
-						@Override
+
+                        @Override
 						protected Record executeDao(DaoCommand<Record> daoCommand) {
-							ds = new DataSource();
-							ds.setup(self);
+                            //one DataSource per Activity
+                            if(ds == null) {
+                                ds = new DataSource();
+                                ds.setup(self);
+                            }
 							AbstractDao<Record, Long> dao = ds.getDaoSession().getRecordDao(); 
 							Record entity = daoCommand.getEntity();
 							if(daoCommand.getCrud() == DaoCommand.CRUD.SELECT) {
@@ -140,6 +144,7 @@ public class ListRecordActivity extends ListActivity implements BaseActivityHelp
 							}
 							return null;
 						}
+
 						@Override
 						protected void updateUi(Entity result) {
 							Record record = (Record)result;

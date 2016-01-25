@@ -10,6 +10,9 @@ import com.geeks.mylocker.dao.FieldDao;
 import com.geeks.mylocker.dao.FolderDao;
 import com.geeks.mylocker.dao.RecordDao;
 
+/**
+ *
+ */
 public class DataSource {
 
 	protected final String TAG = getClass().getSimpleName();

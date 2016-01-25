@@ -2,6 +2,10 @@ package com.geeks.mylocker.async;
 
 import de.greenrobot.dao.AbstractDao;
 
+/**
+ *
+ * @param <T>
+ */
 public class DaoCommand<T> {
 
 	public static enum CRUD {
