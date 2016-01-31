@@ -8,9 +8,13 @@ import com.geeks.mylocker.helper.BaseActivityHelper;
 
 public class AppBaseActivity extends Activity implements BaseActivityHelper {
 
+	protected final String TAG = getClass().getSimpleName();
+
 	private ActivityHelper activityHelper;
 	
 	private Config config;
+
+	protected Activity self;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +23,7 @@ public class AppBaseActivity extends Activity implements BaseActivityHelper {
 		
 		activityHelper = new ActivityHelper(this);
 		activityHelper.registerBaseActivityReceiver();
+		self = this;
 	}
 
 	@Override

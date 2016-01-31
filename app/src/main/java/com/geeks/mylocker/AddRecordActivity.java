@@ -1,7 +1,5 @@
 package com.geeks.mylocker;
 
-import java.util.Date;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +7,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -24,6 +21,8 @@ import com.geeks.mylocker.dao.Folder;
 import com.geeks.mylocker.dao.Record;
 import com.geeks.mylocker.encrypto.Encryptor;
 import com.geeks.mylocker.helper.MenuHelper;
+
+import java.util.Date;
 
 import de.greenrobot.dao.AbstractDao;
 
@@ -40,8 +39,8 @@ public class AddRecordActivity extends AppBaseActivity {
 	String userId;
 	String password;
 	
-	Activity self;
-	
+	//Activity self;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -63,9 +62,9 @@ public class AddRecordActivity extends AppBaseActivity {
 				uiFolderName.setText(folder.getName());
 			}
 		}
-		
-		self = this;
-		
+
+		//self = this;
+
 	}
 
 	@Override

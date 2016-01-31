@@ -4,8 +4,9 @@ import java.io.Serializable;
 
 public class Config implements Serializable {
 
+	public final static String APP_PREF = "app_pref.xml";
+
 	public final static String CONTEXT = "com.geeks.mylocker.config.context";
-	
 
 	private boolean isLogined = Boolean.FALSE;
 	

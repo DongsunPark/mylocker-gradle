@@ -22,7 +22,7 @@ public class ViewRecordActivity extends AppBaseActivity {
 	
 	private Record record;
 	
-	Activity self;
+	//Activity self;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +37,10 @@ public class ViewRecordActivity extends AppBaseActivity {
 			this.setConfig(config);
 			Record record = (Record) extras.getSerializable(ListRecordActivity.SELECTED_ENTITY);
 			//reload detached entity.
-			record = ds.getRecordDao().load(record.getId());
+			record = ds.getRecordDao().loadDeep(record.getId());
 			this.setRecord(record);
 		}
-		self = this;
+		//self = this;
 		
 		this.setTitle(record.getFolder().getName() + " > " + record.getName());
 		updateUi();
